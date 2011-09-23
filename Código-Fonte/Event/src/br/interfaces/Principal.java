@@ -46,6 +46,7 @@ public class Principal extends javax.swing.JFrame {
         Table = new javax.swing.JTable();
         btnCadastraTarefa = new javax.swing.JButton();
         btnConfigurar = new javax.swing.JButton();
+        btnResolvido = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Event");
@@ -85,20 +86,19 @@ public class Principal extends javax.swing.JFrame {
         btnConfigurar.setBounds(10, 320, 140, 30);
         Desktop.add(btnConfigurar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
+        btnResolvido.setText("Resolvido");
+        btnResolvido.setBounds(660, 10, 90, 23);
+        Desktop.add(btnResolvido, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Desktop, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(Desktop, javax.swing.GroupLayout.DEFAULT_SIZE, 758, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Desktop, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(Desktop, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE)
         );
 
         pack();
@@ -134,6 +134,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTable Table;
     private javax.swing.JButton btnCadastraTarefa;
     private javax.swing.JButton btnConfigurar;
+    private javax.swing.JButton btnResolvido;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 

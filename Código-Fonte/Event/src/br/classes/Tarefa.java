@@ -79,4 +79,8 @@ public class Tarefa {
         return false;
     }
 
+    public void carregandoDadosGrid(){
+        String instrucao = "SELECT ";
+    }
+
 }
