@@ -18,7 +18,6 @@ public class Conexao {
     public void inserirTarefa(String instrucao) throws SQLException {
 
         Statement stmt;
-        String insert;
         String string = "jdbc:jtds:sqlserver://localhost:1433/Event;instance=SQLEXPRESS;user=sa;password=daniele534126";
         Connection con;
 
@@ -35,6 +34,37 @@ public class Conexao {
         stmt.execute(instrucao);
         stmt.close();
         con.close();
+
+    }
+
+    public String inserindoConfiguracao(String maquina,String instancia,String usuario,String senha){
+
+        String retorno = "";
+
+        String buscandoInformacao = "SELECT ";
+
+        return "";
+    }
+
+    public boolean testarConexao(String maquina,String instancia,String usuario,String senha) throws SQLException{
+
+        Connection conectar;
+        String string = "jdbc:jtds:sqlserver://" + maquina + ":1433/Event;instance=" + instancia + ";user=" + usuario + ";password=" + senha;
+
+        try {
+            Class.forName("net.sourceforge.jtds.jdbc.Driver");
+        } catch (java.lang.ClassNotFoundException e) {
+            e.getMessage();
+        }
+
+        try{
+            conectar = DriverManager.getConnection(string);
+            return true;
+        }catch(SQLException e){
+            e.getMessage();
+        }
+
+        return false;
 
     }
 }
