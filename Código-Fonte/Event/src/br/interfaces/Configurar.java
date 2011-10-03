@@ -8,7 +8,6 @@
  *
  * Created on 22/09/2011, 17:17:01
  */
-
 package br.interfaces;
 
 import br.conexao.Conexao;
@@ -37,29 +36,31 @@ public class Configurar extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        txtMaquina = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        txtInstancia = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        txtTempo = new javax.swing.JTextField();
+        grupoRadioButton = new javax.swing.ButtonGroup();
         btnGravar = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        groupSeguranca = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        txtSenha = new javax.swing.JPasswordField();
         txtUsuario = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        txtSenha = new javax.swing.JPasswordField();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        radioWindows = new javax.swing.JRadioButton();
+        radioSql = new javax.swing.JRadioButton();
+        groupBanco = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-
-        jLabel1.setText("Nome da Máquina");
-
-        jLabel2.setText("Instância");
-
-        jLabel3.setText("Tempo de Espera");
+        txtMaquina = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        txtInstancia = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        groupAdicionais = new javax.swing.JPanel();
+        btnTestar = new javax.swing.JButton();
+        cboSkins = new javax.swing.JComboBox();
+        labelTesteConexao = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txtTempo = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
 
         btnGravar.setText("Gravar");
         btnGravar.addActionListener(new java.awt.event.ActionListener() {
@@ -75,104 +76,218 @@ public class Configurar extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel4.setText("Usuário");
+        groupSeguranca.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Segurança", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+
+        jLabel9.setText("Ex: sa, usuário do SqlServer");
 
         jLabel5.setText("Senha");
 
-        jLabel6.setText("Ex: 10, corresponde em segundos");
+        jLabel4.setText("Usuário");
+
+        grupoRadioButton.add(radioWindows);
+        radioWindows.setText("Windows");
+        radioWindows.setName("seguranca"); // NOI18N
+        radioWindows.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioWindowsActionPerformed(evt);
+            }
+        });
+
+        grupoRadioButton.add(radioSql);
+        radioSql.setText("Sql Server");
+        radioSql.setActionCommand("Windows");
+        radioSql.setName("seguranca");
+        radioSql.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioSqlActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout groupSegurancaLayout = new javax.swing.GroupLayout(groupSeguranca);
+        groupSeguranca.setLayout(groupSegurancaLayout);
+        groupSegurancaLayout.setHorizontalGroup(
+            groupSegurancaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(groupSegurancaLayout.createSequentialGroup()
+                .addGroup(groupSegurancaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(groupSegurancaLayout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addGroup(groupSegurancaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(groupSegurancaLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel5))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(groupSegurancaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addGroup(groupSegurancaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtSenha)
+                                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(groupSegurancaLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(radioWindows)
+                        .addGap(41, 41, 41)
+                        .addComponent(radioSql)))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+        groupSegurancaLayout.setVerticalGroup(
+            groupSegurancaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, groupSegurancaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(groupSegurancaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(radioWindows)
+                    .addComponent(radioSql))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addGroup(groupSegurancaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(2, 2, 2)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(groupSegurancaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        groupBanco.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Banco de Dados", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
 
         jLabel7.setText("Ex: Maquina1");
 
         jLabel8.setText("Ex: SQLEXPRESS");
 
-        jLabel9.setText("Ex: sa, usuário do SqlServer");
+        txtMaquina.setNextFocusableComponent(txtInstancia);
 
-        jButton1.setText("Testar Configuração");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setText("Nome da Máquina");
+
+        jLabel2.setText("Instância");
+
+        javax.swing.GroupLayout groupBancoLayout = new javax.swing.GroupLayout(groupBanco);
+        groupBanco.setLayout(groupBancoLayout);
+        groupBancoLayout.setHorizontalGroup(
+            groupBancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(groupBancoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(groupBancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(groupBancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(txtInstancia, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addContainerGap(69, Short.MAX_VALUE))
+        );
+        groupBancoLayout.setVerticalGroup(
+            groupBancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, groupBancoLayout.createSequentialGroup()
+                .addContainerGap(63, Short.MAX_VALUE)
+                .addGroup(groupBancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(2, 2, 2)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(groupBancoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtInstancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
+                .addContainerGap())
+        );
+
+        groupAdicionais.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Testando e Adicionais", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+
+        btnTestar.setText("Testar Conexão");
+        btnTestar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnTestarActionPerformed(evt);
             }
         });
+
+        cboSkins.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        labelTesteConexao.setText("Conexao");
+
+        jLabel3.setText("Tempo de Espera");
+
+        jLabel6.setText("Ex: 10, corresponde em segundos");
+
+        javax.swing.GroupLayout groupAdicionaisLayout = new javax.swing.GroupLayout(groupAdicionais);
+        groupAdicionais.setLayout(groupAdicionaisLayout);
+        groupAdicionaisLayout.setHorizontalGroup(
+            groupAdicionaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(groupAdicionaisLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(groupAdicionaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(cboSkins, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnTestar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(labelTesteConexao)
+                .addGap(58, 58, 58)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(groupAdicionaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, groupAdicionaisLayout.createSequentialGroup()
+                        .addComponent(txtTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44))
+                    .addComponent(jLabel6))
+                .addContainerGap(97, Short.MAX_VALUE))
+        );
+        groupAdicionaisLayout.setVerticalGroup(
+            groupAdicionaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(groupAdicionaisLayout.createSequentialGroup()
+                .addGroup(groupAdicionaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(groupAdicionaisLayout.createSequentialGroup()
+                        .addGroup(groupAdicionaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnTestar)
+                            .addComponent(labelTesteConexao))
+                        .addGap(18, 18, 18)
+                        .addComponent(cboSkins, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(groupAdicionaisLayout.createSequentialGroup()
+                        .addGroup(groupAdicionaisLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtTempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6)))
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(50, 50, 50)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jButton1)))
-                    .addComponent(jLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel6)
-                    .addComponent(txtTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnGravar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSair))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(txtInstancia, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel5))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(txtMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jLabel4)))
-                            .addComponent(jLabel7))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtSenha)
-                                .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(btnGravar)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(btnSair))))))
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(groupAdicionais, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(groupBanco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(25, 25, 25)
+                                .addComponent(groupSeguranca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtMaquina, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
-                .addGap(2, 2, 2)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel9))
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(groupSeguranca, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(groupBanco, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtInstancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addGap(54, 54, 54)
+                .addComponent(groupAdicionais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSair)
-                    .addComponent(btnGravar)
-                    .addComponent(jButton1))
-                .addContainerGap(32, Short.MAX_VALUE))
+                    .addComponent(btnGravar))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         pack();
@@ -186,56 +301,74 @@ public class Configurar extends javax.swing.JInternalFrame {
 
     private void btnGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGravarActionPerformed
         // TODO add your handling code here:
-        
     }//GEN-LAST:event_btnGravarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnTestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestarActionPerformed
         // TODO add your handling code here:
         boolean verificador = false;
         boolean testador = false;
 
-        if(txtMaquina.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null,"Verifique o campo máquina!!!");
+        if (txtMaquina.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Verifique o campo máquina!!!");
             verificador = true;
         }
 
-        if(txtInstancia.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null,"Verifique o campo instancia!!!");
+        if (txtInstancia.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Verifique o campo instancia!!!");
             verificador = true;
         }
 
-        if(txtUsuario.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null,"Verifique o campo usuário!!!");
-            verificador = true;
+        if (radioSql.isSelected()) {
+            if (txtUsuario.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Verifique o campo usuário!!!");
+                verificador = true;
+            }
+
+            if (txtSenha.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Verifique o campo senha!!!");
+                verificador = true;
+            }
         }
 
-        if(txtSenha.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null,"Verifique o campo senha!!!");
-            verificador = true;
-        }
 
-        if (verificador == false){
-            br.classes.ManipulandoXML manipula = new br.classes.ManipulandoXML();
+        if (verificador == true) {
+            br.conexao.Conexao conectar = new br.conexao.Conexao();
+            //br.classes.ManipulandoXML manipula = new br.classes.ManipulandoXML();
             try {
-                manipula.cria_arquivo();
-                testador = manipula.grava_dados(txtMaquina.getText(),txtInstancia.getText(),txtUsuario.getText(), txtSenha.getText(),Integer.parseInt(txtTempo.getText()));
+                //    manipula.cria_arquivo();
+                //   testador = manipula.grava_dados(txtMaquina.getText(),txtInstancia.getText(),txtUsuario.getText(), txtSenha.getText(),Integer.parseInt(txtTempo.getText()));
+//                if(conectar.testarConexao(txtMaquina.getText(),txtInstancia.getText(),txtUsuario.getText(), txtSenha.getText())){
+//                    labelTesteConexao.setText("Conexão Feita com Sucesso!!!");
+//                }
+//                    labelTesteConexao.setText("Conexão não Aceita!!!");
+                conectar.inserirTarefa();
+
             } catch (Exception ex) {
                 Logger.getLogger(Configurar.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+    }//GEN-LAST:event_btnTestarActionPerformed
 
-        if (testador == true){
-            JOptionPane.showMessageDialog(null,"Conexão feita com sucesso!!!");
-        }else{
-            JOptionPane.showMessageDialog(null,"A conexão não foi bem sucedida, por favor reconfigure!!!");
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void radioWindowsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioWindowsActionPerformed
+        // TODO add your handling code here:
+        txtUsuario.setEnabled(false);
+        txtSenha.setEnabled(false);
+    }//GEN-LAST:event_radioWindowsActionPerformed
 
-
+    private void radioSqlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioSqlActionPerformed
+        // TODO add your handling code here:
+        txtUsuario.setEnabled(true);
+        txtSenha.setEnabled(true);
+    }//GEN-LAST:event_radioSqlActionPerformed
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGravar;
     private javax.swing.JButton btnSair;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnTestar;
+    private javax.swing.JComboBox cboSkins;
+    private javax.swing.JPanel groupAdicionais;
+    private javax.swing.JPanel groupBanco;
+    private javax.swing.JPanel groupSeguranca;
+    private javax.swing.ButtonGroup grupoRadioButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -245,11 +378,13 @@ public class Configurar extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel labelTesteConexao;
+    private javax.swing.JRadioButton radioSql;
+    private javax.swing.JRadioButton radioWindows;
     private javax.swing.JTextField txtInstancia;
     private javax.swing.JTextField txtMaquina;
     private javax.swing.JPasswordField txtSenha;
     private javax.swing.JTextField txtTempo;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
-
 }

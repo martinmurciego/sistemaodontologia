@@ -29,7 +29,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="Desktop" alignment="1" pref="398" max="32767" attributes="0"/>
+          <Component id="Desktop" alignment="1" pref="469" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -44,7 +44,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
-              <JLayeredPaneConstraints x="210" y="10" width="440" height="340" layer="0" position="-1"/>
+              <JLayeredPaneConstraints x="210" y="10" width="440" height="440" layer="0" position="-1"/>
             </Constraint>
           </Constraints>
 
@@ -91,7 +91,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JLayeredPaneSupportLayout$JLayeredPaneConstraintsDescription">
-              <JLayeredPaneConstraints x="660" y="10" width="90" height="-1" layer="0" position="-1"/>
+              <JLayeredPaneConstraints x="660" y="10" width="90" height="30" layer="0" position="-1"/>
             </Constraint>
           </Constraints>
         </Component>

@@ -14,8 +14,14 @@
         Eu sou o conteúdo do corpo.
     </ui:define>
 
-    <ui:define name="center">
-        Eu sou apenas o rodapé =/
+    <ui:define name="content">
+        <h:form>
+            <h:outputLabel value="login" />
+            <p:inputText value="#{loginBean.login}"/>
+            <h:outputLabel value="password" />
+            <p:inputText value="#{loginBean.password}"/>
+            <p:commandButton action="#{loginBean.verifica}" value="Clique Aqui"/>
+        </h:form>
     </ui:define>
 </ui:composition>
 

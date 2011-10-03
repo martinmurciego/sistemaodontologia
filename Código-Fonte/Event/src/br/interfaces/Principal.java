@@ -11,16 +11,6 @@
 
 package br.interfaces;
 
-import java.awt.BorderLayout;
-import java.awt.Desktop;
-import javax.swing.JDesktopPane;
-import javax.swing.JFrame;
-import javax.swing.JInternalFrame;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.ScrollPaneConstants;
-import javax.swing.table.DefaultTableModel;
-
 /**
  *
  * @author william
@@ -65,7 +55,7 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(Table);
 
-        jScrollPane1.setBounds(210, 10, 440, 340);
+        jScrollPane1.setBounds(210, 10, 440, 440);
         Desktop.add(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         btnCadastraTarefa.setText("Cadastrar Tarefa");
@@ -87,7 +77,7 @@ public class Principal extends javax.swing.JFrame {
         Desktop.add(btnConfigurar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         btnResolvido.setText("Resolvido");
-        btnResolvido.setBounds(660, 10, 90, 23);
+        btnResolvido.setBounds(660, 10, 90, 30);
         Desktop.add(btnResolvido, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -98,7 +88,7 @@ public class Principal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Desktop, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 398, Short.MAX_VALUE)
+            .addComponent(Desktop, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 469, Short.MAX_VALUE)
         );
 
         pack();
