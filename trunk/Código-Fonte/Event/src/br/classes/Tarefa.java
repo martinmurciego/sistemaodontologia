@@ -71,9 +71,9 @@ public class Tarefa {
         br.conexao.Conexao conexao = new br.conexao.Conexao();
 
         try {
-            conexao.inserirTarefa(insert);
+   //         conexao.inserirTarefa(insert);
             return true;
-        } catch (SQLException ex) {
+        } catch (Exception ex) {
             Logger.getLogger(Tarefa.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;

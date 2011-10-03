@@ -15,10 +15,10 @@ import java.sql.Statement;
  */
 public class Conexao {
 
-    public void inserirTarefa(String instrucao) throws SQLException {
+    public void inserirTarefa() throws SQLException {
 
         Statement stmt;
-        String string = "jdbc:jtds:sqlserver://localhost:1433/Event;instance=SQLEXPRESS;user=sa;password=daniele534126";
+        String string = "jdbc:jtds:sqlserver://localhost:1433/Event;instance=SQLEXPRESS;namedpipe=true";
         Connection con;
 
 
@@ -31,7 +31,7 @@ public class Conexao {
         con = DriverManager.getConnection(string);
 
         stmt = con.createStatement();
-        stmt.execute(instrucao);
+//        stmt.execute(instrucao);
         stmt.close();
         con.close();
 
