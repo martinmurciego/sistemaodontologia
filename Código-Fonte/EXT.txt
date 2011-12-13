@@ -1,0 +1,11 @@
+WEBCONFIG
+ <httpModules>
+      <add name="DirectRequestModule" type="Ext.Net.DirectRequestModule, Ext.Net" />
+ </httpModules>
+
+PAGINA ASPX
+<%@ Register Namespace="Ext.Net" TagPrefix="ext" Assembly="Ext.Net" %>
+
+DENTRO DO CONTENT DA PAGINA ASPX
+
+<ext:ResourceManager ID="ResourceManager1" runat="server" />
